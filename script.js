@@ -99,6 +99,55 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(style);
 });
 
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.querySelector('.menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+  const navItems = document.querySelectorAll('.nav-links a');
+
+  // Toggle mobile menu
+  function toggleMenu() {
+    navLinks.classList.toggle('active');
+    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    
+    // Toggle between menu and close icon
+    const icon = menuBtn.querySelector('i');
+    if (navLinks.classList.contains('active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  }
+
+  // Close menu when clicking on a nav link
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        toggleMenu();
+      }
+    });
+  });
+
+  // Toggle menu on button click
+  menuBtn.addEventListener('click', toggleMenu);
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-container') && navLinks.classList.contains('active')) {
+      toggleMenu();
+    }
+  });
+
+  // Close menu when window is resized to desktop view
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+      toggleMenu();
+    }
+  });
+});
+
 // Add some interactive sparkle effects
 function createSparkle(x, y) {
     const sparkle = document.createElement('div');
