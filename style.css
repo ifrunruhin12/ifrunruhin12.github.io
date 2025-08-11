@@ -15,8 +15,10 @@ html {
 }
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 999;
   background: rgba(17, 24, 39, 0.9);
   backdrop-filter: blur(10px);
@@ -513,14 +515,13 @@ a:hover {
 
 :root[data-theme="light"] .skill-card {
   background: rgba(0, 0, 0, 0.03);
-  border: 1px solid rgba(124, 58, 237, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 :root[data-theme="light"] .skill-card:hover {
-  box-shadow: 0 0 12px rgba(124, 58, 237, 0.35);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
 }
 
-:root[data-theme="light"] .skills-grid i,
 :root[data-theme="light"] .social-icons a,
 :root[data-theme="light"] .social-inline a {
   color: #7c3aed;
