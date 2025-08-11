@@ -148,6 +148,57 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Theme toggle and persistence
+document.addEventListener('DOMContentLoaded', function() {
+  const root = document.documentElement;
+  const toggleBtn = document.querySelector('.theme-toggle');
+  const icon = toggleBtn ? toggleBtn.querySelector('i') : null;
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    if (icon) {
+      const light = theme === 'light';
+      // Show sun when in dark theme (suggesting you can switch to light), moon in light
+      icon.classList.toggle('fa-sun', !light);
+      icon.classList.toggle('fa-moon', light);
+    }
+  }
+
+  function getPreferredTheme() {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light' || saved === 'dark') return saved;
+    const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    return prefersLight ? 'light' : 'dark';
+  }
+
+  function setTheme(theme) {
+    localStorage.setItem('theme', theme);
+    applyTheme(theme);
+  }
+
+  // Initialize
+  applyTheme(getPreferredTheme());
+
+  // Respond to system changes
+  if (window.matchMedia) {
+    const mq = window.matchMedia('(prefers-color-scheme: light)');
+    mq.addEventListener && mq.addEventListener('change', () => {
+      if (!localStorage.getItem('theme')) {
+        applyTheme(getPreferredTheme());
+      }
+    });
+  }
+
+  // Click handler
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      setTheme(next);
+    });
+  }
+});
+
 // Add some interactive sparkle effects
 function createSparkle(x, y) {
     const sparkle = document.createElement('div');
