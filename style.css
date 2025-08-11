@@ -438,7 +438,7 @@ a:hover {
 
 .theme-toggle--floating {
   position: absolute;
-  top: 1rem;
+  top: 4.25rem; /* sit below fixed navbar */
   right: 1rem;
   z-index: 1000;
 }
@@ -446,6 +446,27 @@ a:hover {
 .theme-toggle:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.25);
+}
+
+@media screen and (max-width: 768px) {
+  /* Avoid overlap with hamburger button on mobile */
+  .theme-toggle--floating {
+    left: 1rem;
+    right: auto;
+    top: 4.25rem;
+  }
+  .hero {
+    padding: 4rem 1rem 5rem;
+    min-height: 60vh;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-greeting {
+    font-size: 1.2rem;
+  }
 }
 
 /* Light theme overrides */
