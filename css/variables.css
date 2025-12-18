@@ -1,0 +1,51 @@
+/* CSS Variables - Newspaper Portfolio */
+
+:root {
+  /* Newspaper Color Palette */
+  --newspaper-black: #000000;
+  --newspaper-white: #f7ebd6;  /* Antique paper color */
+  --newspaper-cream: #fff8e9;  /* Lighter cream for backgrounds */
+  --newspaper-gray: #333333;
+  --newspaper-light-gray: #666666;
+  --newspaper-border: #cebea4;  /* Aged border color */
+  
+  /* Newspaper Typography */
+  --font-headline: 'Times New Roman', 'Georgia', serif;
+  --font-body: 'Arial', 'Helvetica', sans-serif;
+  --font-sans: 'Arial', 'Helvetica', sans-serif;
+  --font-monospace: 'Courier New', monospace;
+  
+  /* Layout Variables */
+  --newspaper-gutter: 2rem;
+  --newspaper-column-rule: 1px solid var(--newspaper-gray);
+  --newspaper-column-padding: 1rem;
+  
+  /* Page Dimensions */
+  --page-width: 1000px;
+  --page-height: 1200px;
+  --nav-width: 250px;
+}
+
+/* Responsive Variable Overrides */
+@media screen and (max-width: 1200px) {
+  :root {
+    --newspaper-gutter: 1.5rem;
+    --newspaper-column-padding: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --newspaper-gutter: 1rem;
+    --newspaper-column-padding: 0.5rem;
+    --page-height: 900px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    --newspaper-gutter: 0.75rem;
+    --newspaper-column-padding: 0.25rem;
+    --page-height: 700px;
+  }
+}

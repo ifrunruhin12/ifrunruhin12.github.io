@@ -1,0 +1,109 @@
+/* Page System and Animations */
+
+.newspaper-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: var(--page-width);
+  height: var(--page-height);
+  max-width: var(--page-width);
+  margin: 0 auto;
+  background-color: var(--newspaper-white);
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(139, 119, 101, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(160, 140, 120, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(180, 160, 140, 0.01) 0%, transparent 50%);
+  padding: 2rem;
+  border: 2px solid var(--newspaper-black);
+  box-shadow: 0 4px 12px rgba(139, 119, 101, 0.15), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.4s ease,
+              visibility 0.4s ease;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.newspaper-page.active {
+  opacity: 1;
+  visibility: visible;
+  transform: rotateY(0deg);
+  z-index: 10;
+}
+
+/* Page flip animation states - handled by keyframe animations */
+.newspaper-page.flipping-out {
+  z-index: 5;
+}
+
+.newspaper-page.flipping-in {
+  z-index: 5;
+}
+
+/* Page Headers */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--newspaper-black);
+}
+
+.page-title {
+  font-family: var(--font-headline);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--newspaper-black);
+}
+
+.page-number {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--newspaper-light-gray);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--newspaper-black);
+}
+
+/* Responsive Pages */
+@media screen and (max-width: 768px) {
+  .newspaper-page {
+    width: 100%;
+    height: var(--page-height);
+    max-width: 100%;
+    padding: 1rem;
+    position: relative;
+    overflow-y: auto;
+  }
+  
+  .newspaper-page {
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+  }
+  
+  .newspaper-page.flipping-out {
+    transform: translateX(-100%) scale(0.95);
+    opacity: 0;
+  }
+  
+  .newspaper-page.flipping-in {
+    transform: translateX(100%) scale(0.95);
+    opacity: 0;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+}

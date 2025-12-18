@@ -1,0 +1,79 @@
+/* Base Styles - Reset and Typography */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--newspaper-white);
+  color: var(--newspaper-black);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Typography Hierarchy */
+.masthead-title {
+  font-family: var(--font-headline);
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--newspaper-black);
+  margin: 1rem 0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px var(--newspaper-white), 
+               2px 2px 0px var(--newspaper-black);
+}
+
+.headline {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  color: var(--newspaper-black);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.headline-large { font-size: 2.5rem; }
+.headline-medium { font-size: 2rem; }
+.headline-small { font-size: 1.5rem; }
+
+.byline {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--newspaper-light-gray);
+  font-style: italic;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.article-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--newspaper-black);
+  text-align: justify;
+}
+
+.article-text p {
+  margin-bottom: 1rem;
+  text-indent: 1.5em;
+}
+
+.article-text p:first-child {
+  text-indent: 0;
+}
+
+/* Responsive Typography */
+@media screen and (max-width: 768px) {
+  .masthead-title { font-size: 2.5rem; }
+}
+
+@media screen and (max-width: 480px) {
+  .masthead-title { font-size: 2rem; }
+  .headline-large { font-size: 1.5rem; }
+  .headline-medium { font-size: 1.3rem; }
+  .headline-small { font-size: 1.1rem; }
+}

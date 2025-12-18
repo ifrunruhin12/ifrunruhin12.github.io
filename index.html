@@ -3,268 +3,298 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ifrun Kader Ruhin</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <title>The Ruhin Times - Portfolio Newspaper</title>
+    <link rel="stylesheet" href="css/main.css" />
+
   </head>
   <body>
-    <!-- Navbar -->
-    <header class="navbar">
-      <div class="nav-container">
-        <span class="emoji">👨‍💻</span>
-        <button class="menu-btn" aria-label="Toggle menu">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="nav-links">
-          <a href="#home">Home</a>
-          <!-- a href="/blog/" class="blog-link">Blog</a -->
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#achievements">Achievements</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+    <!-- Newspaper Container -->
+    <div class="newspaper-container">
+      
+      <!-- Navigation Menu -->
+      <nav class="newspaper-nav">
+        <div class="nav-header">
+          <h3 class="nav-title">Sections</h3>
+          <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
         </div>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-      <button
-        class="theme-toggle theme-toggle--floating"
-        aria-label="Toggle color theme"
-        title="Toggle theme"
-      >
-        <i class="fa-solid fa-sun"></i>
-      </button>
-      <div class="hero-content">
-        <p class="hero-greeting">
-          <span id="typewriter"></span>
-          <span class="cursor">|</span>
-        </p>
-        <h1 class="hero-title">
-          <span class="name-word" data-delay="0">Ifrun</span>
-          <span class="name-word" data-delay="200">Kader</span>
-          <span class="name-word" data-delay="400">Ruhin</span>
-        </h1>
-        <p class="tagline">
-          <span class="tagline-word" data-delay="0">Backend</span>
-          <span class="tagline-word" data-delay="100">Dev</span>
-          <span class="tagline-separator">|</span>
-          <span class="tagline-word" data-delay="200">Linux</span>
-          <span class="tagline-word" data-delay="300">enthusiast</span>
-          <span class="tagline-separator">|</span>
-          <span class="tagline-word" data-delay="400">Passionate</span>
-          <span class="tagline-word" data-delay="500">about</span>
-          <span class="tagline-word" data-delay="600">Cybersecurity</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="container" id="about" data-aos="fade-up">
-      <h2>About Me</h2>
-      <div class="about-layout">
-        <img
-          src="assets/profile.jpg"
-          alt="Profile"
-          class="profile-img about-side-img"
-        />
-        <div class="glass">
-          <p>
-            Hey there 👋 I'm Ruhin, a backend developer passionate about Golang,
-            Linux, and clean code. I spend my time building things that are
-            useful, fast, and fun to maintain. Whether it's contributing to
-            open-source or solving algorithms at 3 AM, I’m always looking for
-            the next technical thrill.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="container" id="skills" data-aos="fade-up">
-      <h2>Skillset</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <i class="devicon-go-original-wordmark colored"></i>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-python-plain colored"></i>
-        </div>
-        <div class="skill-card"><i class="devicon-c-line colored"></i></div>
-        <div class="skill-card">
-          <i class="devicon-cplusplus-plain colored"></i>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-javascript-plain colored"></i>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-linux-plain colored"></i>
-        </div>
-        <div class="skill-card"><i class="devicon-git-plain colored"></i></div>
-        <div class="skill-card"><i class="devicon-bash-plain colored"></i></div>
-        <div class="skill-card">
-          <i class="devicon-postgresql-plain colored"></i>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-tailwindcss-plain colored"></i>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tools Section -->
-    <section class="container" id="tools" data-aos="fade-up">
-      <h2>Tools I use</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neovim/neovim-original.svg"
-          />
-        </div>
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-plain.svg"
-          />
-        </div>
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dbeaver/dbeaver-original.svg"
-          />
-        </div>
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg"
-          />
-        </div>
-        <div class="skill-card">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section class="container" id="achievements" data-aos="fade-up">
-      <h2>Achievements</h2>
-      <div class="glass">
-        <ul class="list-disc list-inside text-gray-300 space-y-2">
-          <li>
-            🎯 Contributed to the
-            <a href="https://github.com/torvalds/linux" class="text-blue-400"
-              >Linux Kernel</a
-            >
-          </li>
-          <li>
-            📘 Created my own
-            <a
-              href="https://github.com/ifrunruhin12/bytebook"
-              class="text-blue-400"
-              >personal mdBook</a
-            >
-          </li>
-          <li>🏆 13th place – National HS Programming Contest 2022</li>
-          <li>🥈 1st Runner-up – BDJSO (Regional)</li>
+        <ul class="nav-menu">
+          <li><a href="#" data-page="home" class="nav-link active">Home</a></li>
+          <li><a href="#" data-page="about" class="nav-link">About</a></li>
+          <li><a href="#" data-page="skills" class="nav-link">Skills</a></li>
+          <li><a href="#" data-page="achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#" data-page="projects" class="nav-link">Projects</a></li>
+          <li><a href="#" data-page="contact" class="nav-link">Contact</a></li>
         </ul>
-      </div>
-    </section>
+      </nav>
 
-    <!-- Projects Section -->
-    <section class="container" id="projects" data-aos="fade-up">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="glass project-card">
-          <h3>📘 Gopher Grind CP</h3>
-          <p>Solved 300+ problems using Golang on Codeforces & LeetCode.</p>
-          <a
-            href="https://github.com/ifrunruhin12/gopher-grind-cp"
-            class="text-blue-400"
-            >[View Project]</a
-          >
-        </div>
-        <div class="glass project-card">
-          <h3>🔧 Golang Mini Projects</h3>
-          <p>CLI-based tools built with Go for daily dev hacks.</p>
-          <a
-            href="https://github.com/ifrunruhin12/Golang-small-projects"
-            class="text-blue-400"
-            >[View Project]</a
-          >
-        </div>
-        <div class="glass project-card">
-          <h3>📚 BGCE Archive</h3>
-          <p>Helped build an archive platform for BGCE community.</p>
-          <a href="https://github.com/NesoHQ/bgce-archive" class="text-blue-400"
-            >[View Project]</a
-          >
-        </div>
-        <div class="glass project-card">
-          <h3>🧠 Speech Recognition App</h3>
-          <p>Assistive tech for speech-impaired users using Python and AI.</p>
-        </div>
-        <div class="glass project-card">
-          <h3>◓ PokeTacTix</h3>
-          <p>
-            This is personal project of mine which I am doing for fun and
-            learning purpose. Hopefully this project will turn into something I
-            can be proud of and people will have fun exploring.
-          </p>
-          <a
-            href="https://github.com/ifrunruhin12/PokeTacTix"
-            class="text-blue-400"
-            >[View Project]</a
-          >
-        </div>
-        <div class="glass project-card">
-          <h3>🧠 GridPro - The Smartest Connect-4 AI</h3>
-          <p>
-            Connet 4 AI to alway win, made with Golang, an after-story of a date
-          </p>
-          <a
-            href="https://github.com/ifrunruhin12/gridpro"
-            class="text-blue-400"
-            >[View Project]</a
-          >
-        </div>
-      </div>
-    </section>
+      <!-- Main Newspaper Content -->
+      <main class="newspaper-main">
+        
+        <!-- Home Page -->
+        <section class="newspaper-page active" id="home-page">
+          <header class="newspaper-masthead">
+            <div class="masthead-border"></div>
+            <h1 class="masthead-title">The Ruhin Times</h1>
+            <div class="masthead-subtitle">A Personal Portfolio Newspaper</div>
+            <div class="masthead-date">December 2024 Edition</div>
+            <div class="masthead-border"></div>
+          </header>
+          
+          <div class="newspaper-rule-thick"></div>
+          
+          <div class="newspaper-columns main-sidebar">
+            <div class="newspaper-column">
+              <article class="main-article article newspaper-column-content">
+                <h2 class="article-headline headline headline-large">Welcome to my personal website!</h2>
+                <div class="article-byline byline">By Ifrun Kader Ruhin | Portfolio Editor</div>
+                <div class="article-content article-text">
+                  <p>In an exclusive interview with our editorial team, backend developer and Linux enthusiast Ifrun Kader Ruhin opens the doors to his professional journey. Known for his passion for Golang, cybersecurity, and clean code architecture, Ruhin has established himself as a dedicated contributor to the open-source community.</p>
+                  <p>This special edition of The Ruhin Times provides comprehensive coverage of his technical expertise, notable achievements, and innovative projects that have shaped his career in software development.</p>
+                </div>
+              </article>
+            </div>
+            
+            <div class="newspaper-column">
+              <aside class="sidebar-content newspaper-column-content">
+                <div class="section-preview">
+                  <h3>Inside This Edition</h3>
+                  <ul>
+                    <li>Exclusive developer profile - Page 2</li>
+                    <li>Technical skills showcase - Page 3</li>
+                    <li>Achievement highlights - Page 4</li>
+                    <li>Project portfolio - Page 5</li>
+                    <li>Contact directory - Page 6</li>
+                  </ul>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
 
-    <!-- Connect With Me Section -->
-    <section class="container" id="contact" data-aos="fade-up">
-      <h2>Connect With Me</h2>
-      <div class="social-inline">
-        <a href="mailto:ifrunruhin@gmail.com" title="Email"
-          ><i class="fa-solid fa-envelope"></i
-        ></a>
-        <a href="https://github.com/ifrunruhin12" title="GitHub"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a
-          href="https://linkedin.com/in/ifrun-kader-ruhin-b4291928b"
-          title="LinkedIn"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-        <a href="https://codeforces.com/profile/ifrunruhin12" title="Codeforces"
-          ><i class="fa-solid fa-chess"></i
-        ></a>
-        <a href="https://leetcode.com/u/ifrunruhin/" title="LeetCode"
-          ><i class="fa-solid fa-code"></i
-        ></a>
-        <a href="https://chandpurchessclub.site/" title="Chess Club"
-          ><i class="fa-solid fa-chess-board"></i
-        ></a>
-      </div>
-    </section>
+        <!-- About Page -->
+        <section class="newspaper-page" id="about-page">
+          <div class="page-header">
+            <h2 class="page-title">Developer Profile</h2>
+            <div class="page-number">Page 2</div>
+          </div>
+          
+          <div class="newspaper-rule-thick"></div>
+          
+          <div class="newspaper-columns two-column">
+            <div class="newspaper-column">
+              <article class="feature-article article newspaper-column-content">
+                <h3 class="article-headline headline headline-medium">Meet the Developer Behind the Code</h3>
+                <div class="article-byline byline">Staff Reporter | Technology Section</div>
+                
+                <div class="article-content article-text">
+                  <p>Ifrun Kader Ruhin represents a new generation of developers who combine technical excellence with genuine passion for innovation. Based in his development workspace, Ruhin has carved out a reputation as a backend specialist with particular expertise in Golang and Linux systems.</p>
+                  
+                  <p>"I spend my time building things that are useful, fast, and fun to maintain," Ruhin explains during our interview. "Whether it's contributing to open-source projects or solving algorithms at 3 AM, I'm always looking for the next technical challenge."</p>
+                  
+                  <p>His approach to development emphasizes clean code architecture and sustainable software practices, making him a valuable contributor to various open-source initiatives including the Linux Kernel itself.</p>
+                </div>
+              </article>
+            </div>
+            
+            <div class="newspaper-column">
+              <div class="article-with-photo newspaper-column-content">
+                <img src="assets/profile.jpg" alt="Ifrun Kader Ruhin" class="article-photo">
+                <div class="photo-caption newspaper-caption">Ifrun Kader Ruhin, Backend Developer and Open Source Contributor</div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+        <!-- Skills Page -->
+        <section class="newspaper-page" id="skills-page">
+          <div class="page-header">
+            <h2 class="page-title">Technical Classified</h2>
+            <div class="page-number">Page 3</div>
+          </div>
+          
+          <div class="newspaper-rule-thick"></div>
+          
+          <div class="classified-section">
+            <h3 class="classified-header">Professional Skills Directory</h3>
+            
+            <div class="classified-columns">
+              <div class="classified-category classified">
+                <h4 class="classified-header">Programming Languages</h4>
+                <ul class="classified-list">
+                  <li>Go (Golang) - Expert Level</li>
+                  <li>Python - Advanced</li>
+                  <li>C/C++ - Proficient</li>
+                  <li>JavaScript - Intermediate</li>
+                </ul>
+              </div>
+              
+              <div class="classified-category classified">
+                <h4 class="classified-header">Systems & Tools</h4>
+                <ul class="classified-list">
+                  <li>Linux Administration</li>
+                  <li>Git Version Control</li>
+                  <li>Bash Scripting</li>
+                  <li>PostgreSQL Database</li>
+                </ul>
+              </div>
+              
+              <div class="classified-category classified">
+                <h4 class="classified-header">Development Tools</h4>
+                <ul class="classified-list">
+                  <li>Neovim Editor</li>
+                  <li>Postman API Testing</li>
+                  <li>DBeaver Database Tool</li>
+                  <li>Docker Containerization</li>
+                  <li>Arch Linux Environment</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Achievements Page -->
+        <section class="newspaper-page" id="achievements-page">
+          <div class="page-header">
+            <h2 class="page-title">Achievement Chronicles</h2>
+            <div class="page-number">Page 4</div>
+          </div>
+          
+          <div class="newspaper-rule-thick"></div>
+          
+          <div class="newspaper-columns two-column">
+            <div class="newspaper-column">
+              <article class="achievement-article article newspaper-column-content">
+                <h3 class="major-headline headline headline-large">Developer Contributes to Linux Kernel</h3>
+                <div class="article-byline byline">Technology Correspondent | Open Source Division</div>
+                <p>In a significant milestone for his career, Ifrun Kader Ruhin has successfully contributed to the Linux Kernel, joining the ranks of developers worldwide who help maintain one of the most important open-source projects in computing history.</p>
+              </article>
+              
+              <article class="achievement-article article newspaper-column-content">
+                <h4 class="minor-headline headline headline-medium">Programming Contest Recognition</h4>
+                <div class="article-byline byline">Sports & Competition Desk</div>
+                <p>Achieving 13th place in the National High School Programming Contest 2022, Ruhin demonstrated exceptional problem-solving abilities among the country's top young programmers.</p>
+              </article>
+            </div>
+            
+            <div class="newspaper-column">
+              <article class="achievement-article article newspaper-column-content">
+                <h4 class="minor-headline headline headline-medium">Personal Documentation Platform Launched</h4>
+                <div class="article-byline byline">Innovation Reporter</div>
+                <p>Ruhin has developed and launched his own personal mdBook platform, demonstrating his commitment to knowledge sharing and documentation best practices in the developer community.</p>
+              </article>
+              
+              <article class="achievement-article article newspaper-column-content">
+                <h4 class="minor-headline headline headline-small">Regional Science Olympiad Success</h4>
+                <div class="article-byline byline">Academic Achievement Bureau</div>
+                <p>As 1st Runner-up in the Bangladesh Junior Science Olympiad (Regional), Ruhin showcased his analytical thinking and scientific methodology skills.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Page -->
+        <section class="newspaper-page" id="projects-page">
+          <div class="page-header">
+            <h2 class="page-title">Project Portfolio</h2>
+            <div class="page-number">Page 5</div>
+          </div>
+          
+          <div class="newspaper-rule-thick"></div>
+          
+          <div class="newspaper-columns two-column">
+            <div class="newspaper-column">
+              <article class="project-feature article newspaper-column-content">
+                <h3 class="article-headline headline headline-large">Gopher Grind CP: Algorithmic Excellence</h3>
+                <div class="article-byline byline">Technology Review | Software Development</div>
+                <p>A comprehensive collection of 300+ solved problems using Golang on platforms including Codeforces and LeetCode, demonstrating systematic approach to competitive programming and algorithm mastery.</p>
+                <div class="article-link">Reference: github.com/ifrunruhin12/gopher-grind-cp</div>
+              </article>
+              
+              <article class="project-feature article newspaper-column-content">
+                <h4 class="minor-headline headline headline-medium">BGCE Archive Platform</h4>
+                <div class="article-byline byline">Community Technology Reporter</div>
+                <p>Collaborative development of an archive platform serving the BGCE community, showcasing skills in team-based software development and community-focused solutions.</p>
+                <div class="article-link">Reference: github.com/NesoHQ/bgce-archive</div>
+              </article>
+            </div>
+            
+            <div class="newspaper-column">
+              <article class="project-feature article newspaper-column-content">
+                <h4 class="minor-headline headline headline-medium">Golang Mini Projects Collection</h4>
+                <div class="article-byline byline">Development Tools Correspondent</div>
+                <p>A curated set of CLI-based tools built with Go, designed to streamline daily development workflows and demonstrate practical application of systems programming concepts.</p>
+                <div class="article-link">Reference: github.com/ifrunruhin12/Golang-small-projects</div>
+              </article>
+              
+              <article class="project-feature article newspaper-column-content">
+                <h4 class="minor-headline headline headline-medium">GridPro: Advanced Connect-4 AI</h4>
+                <div class="article-byline byline">Artificial Intelligence Division</div>
+                <p>An intelligent Connect-4 game implementation using Golang, featuring advanced AI algorithms designed for optimal gameplay strategy and decision-making.</p>
+                <div class="article-link">Reference: github.com/ifrunruhin12/gridpro</div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section class="newspaper-page" id="contact-page">
+          <div class="page-header">
+            <h2 class="page-title">Contact Directory</h2>
+            <div class="page-number">Page 6</div>
+          </div>
+          
+          <div class="newspaper-rule-thick"></div>
+          
+          <div class="classified-section">
+            <h3 class="classified-header">Professional Contact Information</h3>
+            
+            <div class="contact-classified">
+              <div class="contact-category classified">
+                <h4 class="classified-header">Direct Communication</h4>
+                <div class="contact-item">
+                  <strong>Email:</strong> ifrunruhin@gmail.com
+                </div>
+              </div>
+              
+              <div class="contact-category classified">
+                <h4 class="classified-header">Professional Networks</h4>
+                <div class="contact-item">
+                  <strong>GitHub:</strong> github.com/ifrunruhin12
+                </div>
+                <div class="contact-item">
+                  <strong>LinkedIn:</strong> linkedin.com/in/ifrun-kader-ruhin-b4291928b
+                </div>
+              </div>
+              
+              <div class="contact-category classified">
+                <h4 class="classified-header">Competitive Programming</h4>
+                <div class="contact-item">
+                  <strong>Codeforces:</strong> codeforces.com/profile/ifrunruhin12
+                </div>
+                <div class="contact-item">
+                  <strong>LeetCode:</strong> leetcode.com/u/ifrunruhin/
+                </div>
+              </div>
+              
+              <div class="contact-category classified">
+                <h4 class="classified-header">Community Projects</h4>
+                <div class="contact-item">
+                  <strong>Chess Club:</strong> chandpurchessclub.site
+                </div>
+              </div>
+              
+              <div class="cv-advertisement">
+                <div class="ad-border newspaper-border">
+                  <a href="assets/cv.pdf" class="cv-download-link" download>Download CV</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

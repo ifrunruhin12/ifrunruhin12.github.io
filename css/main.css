@@ -1,0 +1,22 @@
+/* Newspaper Portfolio - Main CSS File */
+/* Modular CSS Architecture for better maintainability */
+
+/* Import all CSS modules in order of dependency */
+@import url('./variables.css');
+@import url('./base.css');
+@import url('./layout.css');
+@import url('./navigation.css');
+@import url('./pages.css');
+@import url('./components.css');
+@import url('./animations.css');
+
+/* This file serves as the entry point for all styles */
+/* Each module handles a specific aspect of the design:
+ * - variables.css: CSS custom properties and responsive overrides
+ * - base.css: Reset, typography, and base styles
+ * - layout.css: Grid system and container layouts
+ * - navigation.css: Navigation menu and mobile menu
+ * - pages.css: Page system and basic page animations
+ * - components.css: Reusable newspaper components
+ * - animations.css: Advanced page flip animations and effects
+ */
