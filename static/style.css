@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f3f3f3;
+    color: #666;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 24px;
+    min-height: 100vh;
+}
+
+header {
+    margin-bottom: 80px;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.site-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: block;
+    object-fit: contain;
+}
+
+h1 {
+    color: #555;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 500;
+}
+
+nav {
+    font-size: 15px;
+}
+
+nav a {
+    color: #30A13A;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.nav-sep {
+    color: #ccc;
+    margin: 0 10px;
+    user-select: none;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+.intro-text {
+    white-space: pre-wrap;
+}
+
+h2 {
+    color: #30A13A;
+    margin-bottom: 24px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.project {
+    margin-bottom: 32px;
+}
+
+.admin-project {
+    padding-top: 12px;
+    margin-top: 18px;
+    border-top: 1px dashed #ddd;
+}
+
+.admin-project-new h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.project-title {
+    color: #555;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+a.project-title:hover {
+    color: #444;
+}
+
+span.project-title {
+    text-decoration: none;
+    cursor: default;
+}
+
+.project-desc {
+    margin-top: 8px;
+}
+
+footer {
+    margin-top: 120px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+footer a {
+    color: #30A13A;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-muted a {
+    color: #919191;
+}
+
+footer .footer-muted a:hover {
+    color: #30A13A;
+}
+
+.footer-sep {
+    color: #bdbdbd;
+    margin: 0 8px;
+    user-select: none;
+}
+
+.admin-btn {
+    margin-top: 10px;
+    background: none;
+    border: 1px solid #30A13A;
+    color: #30A13A;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.admin-btn:hover {
+    background: rgba(48, 161, 58, 0.12);
+}
+
+.admin-btn-danger {
+    border-color: #c97b7b;
+    color: #995555;
+}
+
+.admin-btn-danger:hover {
+    background: rgba(200, 120, 120, 0.12);
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.35);
+    font-family: inherit;
+    color: #555;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.admin-panel {
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid #ddd;
+}
+
+.admin-panel h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.admin-hint {
+    font-size: 13px;
+    opacity: 0.75;
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: #555;
+    margin-top: 14px;
+    margin-bottom: 2px;
+}
+
+code {
+    font-size: inherit;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
+.inline-form {
+    margin-top: 16px;
+}
+
+.login-box {
+    max-width: 420px;
+}
+
+.login-row {
+    margin-top: 24px;
+}

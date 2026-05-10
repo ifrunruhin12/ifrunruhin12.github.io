@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{.Site.SiteTitle}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<header>
+    <div class="header-row">
+        <img class="site-icon" src="{{.Site.LogoURL}}" width="42" height="42" alt="" decoding="async">
+        <h1>{{.Site.DisplayName}}</h1>
+    </div>
+    <nav>
+        <a href="index.html">Home</a><span class="nav-sep">|</span><a href="about.html">About</a>{{if .IsAdmin}}<span class="nav-sep">|</span><a href="/admin/dashboard">Admin</a>{{end}}
+    </nav>
+</header>
+
+<section>
+    <p class="intro-text">{{.Site.Intro}}</p>
+</section>
+
+<section>
+    <h2>Projects</h2>
+    {{range .Projects}}
+    <div class="project">
+        {{if .Github}}
+        <a class="project-title" href="{{.Github}}" rel="noopener noreferrer">{{.Title}}</a>
+        {{else}}
+        <span class="project-title">{{.Title}}</span>
+        {{end}}
+        <p class="project-desc">{{.Description}}</p>
+    </div>
+    {{end}}
+</section>
+
+<footer>
+    <div class="footer-inner">
+        <div>Copyright © 2026 {{.Site.DisplayName}}</div>
+        <div class="footer-muted">
+            <a href="index.html">Home</a><span class="footer-sep">|</span><a href="about.html">About</a>
+            <span class="footer-sep">|</span>
+            {{- if .Site.GithubURL -}}
+            <a href="{{.Site.GithubURL}}" rel="noopener noreferrer">GitHub</a>
+            {{- else -}}
+            <span>GitHub</span>
+            {{- end -}}
+            <span class="footer-sep">|</span>
+            {{- if .Site.LinkedinURL -}}
+            <a href="{{.Site.LinkedinURL}}" rel="noopener noreferrer">LinkedIn</a>
+            {{- else -}}
+            <span>LinkedIn</span>
+            {{- end -}}
+            <span class="footer-sep">|</span>
+            {{- if .Site.EmailMailto -}}
+            <a href="{{.Site.EmailMailto}}">Email</a>
+            {{- else -}}
+            <span>Email</span>
+            {{- end -}}
+        </div>
+    </div>
+</footer>
+<script src="static/app.js" defer></script>
+</body>
+</html>

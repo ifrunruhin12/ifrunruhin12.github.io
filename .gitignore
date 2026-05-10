@@ -1,2 +1,6 @@
-.vscode
-.git
+portfolio.db
+portfolio
+uploads/*
+!uploads/.gitkeep
+!uploads/rocket.png
+.env

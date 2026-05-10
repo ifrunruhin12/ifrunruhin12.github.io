@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Dashboard · {{.Site.SiteTitle}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+    <div class="header-row">
+        <img class="site-icon" src="{{.Site.LogoURL}}" width="42" height="42" alt="" decoding="async">
+        <h1>{{.Site.DisplayName}}</h1>
+    </div>
+    <nav>
+        <a href="/index.html">Home</a><span class="nav-sep">|</span><a href="/about.html">About</a><span class="nav-sep">|</span><a href="/admin/dashboard">Admin</a>
+    </nav>
+</header>
+
+<section class="admin-panel" style="margin-top:0;padding-top:0;border-top:0;">
+    <h2>Site content</h2>
+    <p class="admin-hint">Update title, intro, about and footer socials from here. No code edits needed.</p>
+    <form method="POST" action="/update-site">
+        <label>Browser title</label>
+        <input type="text" name="site_title" value="{{.Site.SiteTitle}}" placeholder="Displayed on browser tab">
+        <label>Display name (header text)</label>
+        <input type="text" name="display_name" value="{{.Site.DisplayName}}" placeholder="Shown as your portfolio name">
+        <label>Header logo URL</label>
+        <input type="text" name="logo_url" value="{{.Site.LogoURL}}" placeholder="/uploads/rocket.png">
+        <p class="admin-hint" style="margin-top:-8px;">Use a path under <code>/uploads/</code> for files in your <code>uploads/</code> folder (e.g. <code>/uploads/rocket.png</code>), or any full image URL (<code>https://…</code>).</p>
+        <label>Home intro text</label>
+        <textarea name="intro">{{.Site.Intro}}</textarea>
+        <label>About section text</label>
+        <textarea name="about_body">{{.Site.AboutBody}}</textarea>
+        <label>GitHub URL (footer)</label>
+        <input type="text" name="github_url" value="{{.Site.GithubURL}}" placeholder="https://github.com/you">
+        <label>LinkedIn URL (footer)</label>
+        <input type="text" name="linkedin_url" value="{{.Site.LinkedinURL}}" placeholder="https://linkedin.com/in/you">
+        <label>Email link (footer)</label>
+        <input type="text" name="email_mailto" value="{{.Site.EmailMailto}}" placeholder="mailto:you@example.com">
+        <button type="submit" class="admin-btn">Save site content</button>
+    </form>
+</section>
+
+<section class="admin-panel">
+    <h2>Projects</h2>
+    <p class="admin-hint">Add, update or delete projects.</p>
+
+    {{range .Projects}}
+    <div class="project admin-project">
+        <form class="inline-form" method="POST" action="/update-project">
+            <input type="hidden" name="id" value="{{.ID}}">
+            <label>Project title</label>
+            <input type="text" name="title" value="{{.Title}}" placeholder="Title">
+            <label>Description</label>
+            <textarea name="description" placeholder="Description">{{.Description}}</textarea>
+            <label>GitHub URL</label>
+            <input type="text" name="github" value="{{.Github}}" placeholder="https://github.com/you/project">
+            <button type="submit" class="admin-btn">Save project</button>
+        </form>
+        <form method="POST" action="/delete/{{.ID}}">
+            <button type="submit" class="admin-btn admin-btn-danger">Delete project</button>
+        </form>
+    </div>
+    {{end}}
+
+    <div class="admin-project-new">
+        <h3>Add new project</h3>
+        <form method="POST" action="/add-project">
+            <label>Project title</label>
+            <input type="text" name="title" placeholder="Project title">
+            <label>Description</label>
+            <textarea name="description" placeholder="Description"></textarea>
+            <label>GitHub URL</label>
+            <input type="text" name="github" placeholder="https://github.com/you/project">
+            <button type="submit" class="admin-btn">+ Add project</button>
+        </form>
+    </div>
+</section>
+
+<section class="admin-panel">
+    <form class="login-row" method="POST" action="/admin/logout">
+        <button type="submit" class="admin-btn admin-btn-danger">Log out</button>
+    </form>
+</section>
+
+<script src="/static/app.js" defer></script>
+</body>
+</html>
