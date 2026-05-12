@@ -29,6 +29,11 @@ func WriteGitHubPagesHTML(ctx context.Context, repo store.Repository, rootDir st
 
 	writeOne := func(tmplRel, htmlName string) error {
 		dest := filepath.Join(rootDir, htmlName)
+		// Ensure parent directory exists
+		dir := filepath.Dir(dest)
+		if err := os.MkdirAll(dir, 0755); err != nil {
+			return err
+		}
 		f, err := os.Create(dest)
 		if err != nil {
 			return err
